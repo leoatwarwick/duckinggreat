@@ -1,7 +1,15 @@
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("https://source.unsplash.com/random/?duck") center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.masonry {
+    column-count: 1;
+}
+
+@media only screen and (min-width: 640px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .masonry {
+        column-count: 3;
+    }
 }
