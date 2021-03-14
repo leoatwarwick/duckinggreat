@@ -27,21 +27,5 @@ jobs:
             - name: Render Mustache template
               run: pipenv run python3 build.py
 
-            - name: Set user details
-              run: |
-                  git config user.email "11467778+leoriviera@users.noreply.github.com"
-                  git config user.name "Leo Riviera"
-
-            - name: View git status
-              run: git status
-
-            - name: Stage and commit index.html
-              run: |
-                  git add .
-                  git commit -m "Update index.html"
-
-            - name: Pull code from master
-              run: git pull origin master --allow-unrelated-histories
-
-            - name: Push code to master
-              run: git push origin HEAD:master
+            - name: Commit and push changes
+              uses: actions-js/push@master
