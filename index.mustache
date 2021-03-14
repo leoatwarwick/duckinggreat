@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A gallery of ducking great ducks." />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>DuckingGreat</title>
+    </head>
+    <body>
+        <div class="container mx-auto px-4">
+            <section class="py-8 px-4">
+                <div class="bg-white">
+                    <div
+                        class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between"
+                    >
+                        <div class="max-w-xl">
+                            <h2
+                                class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
+                            >
+                                <span class="text-purple-600"
+                                    >Haskell Duck</span
+                                >
+                                Go <span class="text-yellow-400">Quack.</span>
+                            </h2>
+                            <p class="mt-5 text-xl text-gray-500">
+                                Lambda duck orders are being sent out! Send in
+                                your duck pics on Discord, Slack or via email to
+                                <a
+                                    class="underline bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-red-500 to-yellow-400"
+                                    href="mailto:quack@duckinggreat.com?subject=Duck%20Pics"
+                                    >quack@duckinggreat.com</a
+                                >. We'll add them to the gallery as soon as
+                                possible!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-2 md:space-y-4 masonry">
+                    {{#images}}
+                    <img
+                        class="rounded shadow-md"
+                        src="{{ . }}"
+                    />{{/images}}
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

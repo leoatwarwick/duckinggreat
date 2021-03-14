@@ -1,0 +1,24 @@
+name: Build Template
+on: push
+
+jobs:
+    build-template:
+        name: Build Mustache template
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: "3.9.2"
+
+            - name: Install pipenv
+              uses: pip install pipenv
+
+            - name: Render Mustache template
+              run: |
+                  pipenv install
+                  pipenv run python3 build.py
