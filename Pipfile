@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 chevron = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"
