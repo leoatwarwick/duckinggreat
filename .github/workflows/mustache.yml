@@ -24,9 +24,13 @@ jobs:
             - name: Render Mustache template
               run: pipenv run python3 build.py
 
-            - name: commit changed files
-              run: git commit -m "Update index.html"
+            - name: Set user details
+              run: |
+                  git config user.email "11467778+leoriviera@users.noreply.github.com"
+                  git config user.name "Leo Riviera"
 
+            - name: Commit changed files
+              run: git commit -m "Update index.html"
 
             - name: Stage changed files
               run: git add .
