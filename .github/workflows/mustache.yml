@@ -35,5 +35,8 @@ jobs:
             - name: Commit changed files
               run: git commit -m "Update index.html"
 
+            - name: Pull code from master
+              run: git pull origin master
+
             - name: Push code to master
               run: git push origin HEAD:master
