@@ -33,7 +33,7 @@ jobs:
                   git config user.name "Leo Riviera"
 
             - name: View git status
-                run: git status
+              run: git status
 
             - name: Stage and commit index.html
               run: |
