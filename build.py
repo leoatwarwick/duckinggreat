@@ -9,7 +9,6 @@ files = reversed(
 
 images = []
 
-
 for item in files:
     if os.path.isfile(item) and (item.endswith((".png", ".jpg", ".jpeg"))):
         images.append(f"./img/{item}")
