@@ -4,7 +4,7 @@ import os
 images = []
 
 for item in os.listdir("./img"):
-    if os.path.isfile(f'./img/{item}') and (item.endswith(".png") or item.endswith(".jpg")):
+    if os.path.isfile(f'./img/{item}') and (item.endswith((".png", ".jpg", ".jpeg"))):
         images.append(item)
 
 with open("./index.mustache", "r") as template:
