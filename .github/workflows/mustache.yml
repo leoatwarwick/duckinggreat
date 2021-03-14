@@ -31,11 +31,12 @@ jobs:
 
             - name: Stage and commit index.html
               run: |
-                  git add index.html
+                  git add .
                   git commit -m "Update index.html"
+                  git rebase --continue
 
             - name: Pull code from master
-              run: git pull origin master --allow-unrelated-histories --rebase
+              run: git pull origin master
 
             - name: Push code to master
               run: git push origin HEAD:master
