@@ -35,7 +35,7 @@ jobs:
                   git commit -m "Update index.html"
 
             - name: Pull code from master
-              run: git pull origin master --allow-unrelated-histories
+              run: git pull origin master --allow-unrelated-histories --no-ff
 
             - name: Push code to master
               run: git push origin HEAD:master
