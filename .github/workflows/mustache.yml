@@ -10,6 +10,9 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
+            - name: Clean repo
+              run: git clean -f
+
             - name: Set up Python
               uses: actions/setup-python@v2
               with:
@@ -35,7 +38,7 @@ jobs:
                   git commit -m "Update index.html"
 
             - name: Pull code from master
-              run: git pull origin master --rebase
+              run: git pull origin master
 
             - name: Push code to master
               run: git push origin HEAD:master
