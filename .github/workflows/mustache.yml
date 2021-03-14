@@ -31,12 +31,9 @@ jobs:
 
             - name: Stage changed files
               run: git add .
-  
+
             - name: Commit changed files
               run: git commit -m "Update index.html"
-
-            - name: Fetch code from master
-              run: git fetch origin master
 
             - name: Push code to master
               run: git push origin HEAD:master
