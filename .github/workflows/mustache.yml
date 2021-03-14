@@ -18,7 +18,8 @@ jobs:
             - name: Install pipenv
               run: pip install pipenv
 
+            - name: Install dependencies
+              run: pipenv install
+
             - name: Render Mustache template
-              run: |
-                  pipenv install
-                  pipenv run python3 build.py
+              run: pipenv run python3 build.py
