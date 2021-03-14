@@ -33,10 +33,9 @@ jobs:
               run: |
                   git add .
                   git commit -m "Update index.html"
-                  git rebase --continue
 
             - name: Pull code from master
-              run: git pull origin master
+              run: git pull origin master --rebase
 
             - name: Push code to master
               run: git push origin HEAD:master
