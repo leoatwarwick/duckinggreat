@@ -12,7 +12,7 @@ images = []
 
 for item in files:
     if os.path.isfile(item) and (item.endswith((".png", ".jpg", ".jpeg"))):
-        images.append(item)
+        images.append(f"./img/{item}")
 
 with open("../index.mustache", "r") as template:
     index_html = chevron.render(template, {
