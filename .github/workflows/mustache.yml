@@ -10,8 +10,8 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
-            - name: Clean repo
-              run: git clean -f
+            - name: Reset to HEAD
+              run: git reset --hard HEAD
 
             - name: Set up Python
               uses: actions/setup-python@v2
