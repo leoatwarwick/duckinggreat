@@ -16,7 +16,7 @@ jobs:
                   python-version: "3.9.2"
 
             - name: Install pipenv
-              uses: pip install pipenv
+              run: pip install pipenv
 
             - name: Render Mustache template
               run: |
